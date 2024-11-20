@@ -1,0 +1,112 @@
+/* 기본 스타일 */
+body {
+    background-color: #d4d4d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 로그인 화면 스타일 */
+.login-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 2px solid #7a7a7a;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 200px;
+}
+
+.login-container button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+}
+
+/* 게임 화면 스타일 */
+.game-container {
+    background-color: #e0e0e0;
+    border: 2px solid #7a7a7a;
+    padding: 10px;
+    box-shadow: inset 2px 2px 3px #ffffff, inset -2px -2px 3px #7a7a7a;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c0c0c0;
+    border: 2px solid #7a7a7a;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#mine-counter, #timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(9, 30px);
+    grid-gap: 2px;
+    justify-content: center;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, #ffffff, #dcdcdc);
+    border: 2px solid #7a7a7a;
+    box-shadow: inset 1px 1px 1px #ffffff, inset -1px -1px 1px #7a7a7a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cell.opened {
+    background-color: #e0e0e0;
+    box-shadow: none;
+}
+
+.cell.mine {
+    background-color: red;
+}
+
+.cell.flag {
+    background-color: yellow;
+}
+
+.cell-1 {
+    color: blue;
+}
+.cell-2 {
+    color: green;
+}
+.cell-3 {
+    color: red;
+}

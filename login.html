@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="minesweeper.css">
 </head>
 <body>
-    
+    <div class="login-container">
+        <h1>MineSweeper</h1>
+        <label for="nickname">닉네임:</label>
+        <input type="text" id="nickname" placeholder="닉네임을 입력하세요">
+        <button id="start-btn">시작하기</button>
+    </div>
+    <script>
+        document.getElementById('start-btn').onclick = function () {
+            const nickname = document.getElementById('nickname').value;
+            if (nickname) {
+                localStorage.setItem('nickname', nickname);
+                window.location.href = 'minesweeper_game.html';
+            } else {
+                alert('닉네임을 입력하세요!');
+            }
+        };
+    </script>
 </body>
 </html>
